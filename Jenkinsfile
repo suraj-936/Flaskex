@@ -9,6 +9,11 @@ pipeline {
             }
             steps {
                 sh 'python --version'
+                sh '''
+                    if [ "x${REQUIREMENTS_FILE}" != "x" ] && [ -f ${REQUIREMENTS_FILE} ]; then 
+                        pip install -r ${REQUIREMENTS_FILE}; 
+                    fi
+                '''
                 sh 'python -m app.py' 
             }
         }
