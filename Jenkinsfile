@@ -14,7 +14,7 @@ pipeline {
                         pip install -r ${REQUIREMENTS_FILE}; 
                     fi
                 '''
-                sh 'python -m app.py' 
+                sh 'python -u app.py' 
             }
         }
     }
