@@ -8,6 +8,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'python --version'
                 sh 'python -m app.py' 
             }
         }
