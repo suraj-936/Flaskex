@@ -1,6 +1,6 @@
-pipeline{
-        agent{
-                docker{
+pipeline {
+        agent {
+                docker {
                         image 'docker'
                 }
         }
