@@ -3,14 +3,12 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                docker: {
-                    image 'docker'
+                dockerfile true
                 }
             }
             steps {
                 sh 'python --version'
-                
-                sh 'python app.py' 
+               
             }
         }
     }
