@@ -1,7 +1,9 @@
 pipeline {
         agent {
-                docker {
-                        image 'docker'
+        stage('build') {
+                steps {
+                    image = docker.build("${IMAGE}")
                 }
         }
+}
 }
