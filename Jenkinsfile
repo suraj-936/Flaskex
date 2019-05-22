@@ -12,7 +12,6 @@ pipeline {
 			sh 'python app.py'
 		 }	
 		 }
-		 }	
                  stage('One') {
                  steps {
                      echo 'Hi, this is Suraj'
